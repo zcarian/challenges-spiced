@@ -9,11 +9,12 @@
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements of your code via inheritance. Which selector do we need for this? */
 
 /* add selector */
- {
+* {
   font-family: monospace;
   font-size: 1rem;
   line-height: 1.5;
   background-color: LemonChiffon;
+  box-sizing: border-box;
 }
 
 /* ------- Headings Part 1 ------- */
@@ -21,7 +22,9 @@
 /* Task 3: To set the line height to 1.5 is good for texts, because of accessibility concerns, but for the headings it seems too much. Let's change this by giving our headings a line height of 1.2: */
 
 /* your solution */
-
+h1 {
+  line-height: 1.2;
+}
 /* Task 4: Now we want to give our h1 element more styles to shine! Add the following styles by writing the correct declarations inside of the declaration block of the next CSS rule:
 
 - Change the background color to white
@@ -32,6 +35,10 @@
 
 .title {
   /* your solution */
+  background-color: white;
+  margin-top: 0;
+  padding: 10px;
+  text-align: center;
 }
 
 /* ------- Sections ------- */
@@ -46,8 +53,15 @@
 
 section {
   /* your solution */
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-left: solid 5px orange;
 }
 
+.favourites {
+  border-left: solid 5px gold;
+}
 /* ------- Headings Part 2 ------- */
 
 /* Task 6: The headings of our sections somehow look boring. Therefore, we want to change this:
@@ -60,21 +74,29 @@ section {
 
 .subtitle {
   /* your solution */
+  text-decoration: underline solid 3px gold;
+  text-underline-offset: 5px;
+  display: block;
 }
 
+.favourites .subtitle {
+  text-decoration: underline solid 3px orange;
+  text-underline-offset: 5px;
+  display: block;
+}
 /* ------- List ------- */
 
 /* Task 7: Last but not least! We want to style our list with our favorite Pokémon. Which selector do we need? And also add values for the padding. */
 
 /* add selector */
- {
+li {
   list-style: "🧡";
-  padding-left: /* add value */ ;
+  padding-left: 10px;
 }
 
 /* add selector */
- {
-  padding-left: /* add value */ ;
+ul {
+  padding-left: 25px;
 }
 
 /* ------- The End -------- */
