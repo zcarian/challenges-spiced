@@ -1,33 +1,23 @@
+@import "./variables.css";
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: #ffd60a;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
   text-align: center;
 }
 
-/* color pallet
-#ffd60a - light yellow
-#ffbb00 - dark yellow
-#003566 - dark blue
-#001d3d - darker blue
-*/
-
 body {
-  background-color: #001d3d;
-}
-
-h1,
-h2 {
-  color: #ffbb00;
+  background-color: var(--primary-color);
 }
 
 section,
 h1,
 #MyPhoto {
-  background-color: #003566;
+  background-color: var(--secondary-color);
 }
 
 main {
@@ -48,6 +38,10 @@ section {
   vertical-align: middle;
 }
 
+section:hover {
+  transform: scale(1.05);
+}
+
 #MyPhoto {
   width: 250px;
   padding: 20px;
@@ -56,7 +50,12 @@ section {
   margin-top: 30px;
 }
 
+#MyPhoto:hover {
+  transform: scale(1.05);
+}
+
 h1 {
+  color: var(--headline-color);
   margin: 20px;
   border-radius: 10px;
   padding: 10px;
@@ -64,6 +63,7 @@ h1 {
 }
 
 h2 {
+  color: var(--headline-color);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -110,7 +110,7 @@ a:hover {
 }
 
 a:active {
-  color: #ff6600;
+  color: var(--active-link-color);
 }
 
 a:visited {
