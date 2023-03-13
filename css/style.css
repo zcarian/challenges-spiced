@@ -31,6 +31,8 @@ section {
   background-color: #003566;
   padding: 20px;
   border-radius: 20px;
+  border: solid;
+  margin-top: 30px;
 }
 
 h1 {
@@ -38,6 +40,7 @@ h1 {
   border-radius: 10px;
   background-color: #003566;
   padding: 10px;
+  border: solid;
 }
 
 h2 {
@@ -65,14 +68,23 @@ ul {
   list-style: none;
 }
 
+ul > li {
+  font-size: large;
+}
+
 ul > li::before {
   content: "🐻";
   margin-right: 10px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 
 li {
-  display: inline;
+  /* margin-left: 10px; */
+  text-align: left;
+}
+
+ol > li {
+  margin-left: 15px;
 }
 
 a {
@@ -90,4 +102,12 @@ a:active {
 
 a:visited {
   text-decoration: underline;
+}
+
+section {
+  width: 40%;
+  height: 200px;
+  display: inline-block;
+  padding: 20px 20px;
+  vertical-align: middle;
 }
