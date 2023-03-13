@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(209, 206, 206);
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+article {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 30px;
+  background-color: white;
+}
+
+img {
+  border-radius: 20px;
+}
+button {
+  background-color: white;
+  border: none;
+  color: rgb(51, 140, 199);
+}
+
+svg {
+  width: 40px;
+}
+
+p {
+  font-size: 20px;
+}
