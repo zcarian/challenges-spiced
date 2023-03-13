@@ -3,32 +3,53 @@
   margin: 0;
   padding: 0;
   color: #ffd60a;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
 }
+
+/* color pallet
+#ffd60a - light yellow
+#ffbb00 - dark yellow
+#003566 - dark blue
+#001d3d - darker blue
+*/
 
 body {
   background-color: #001d3d;
 }
 
+h1,
+h2 {
+  color: #ffbb00;
+}
+
+section,
+h1,
+#MyPhoto {
+  background-color: #003566;
+}
+
 main {
+  position: relative;
   padding: 20px;
   margin-bottom: 20px;
-  margin: 1rem;
   text-align: center;
 }
 
 section {
-  background-color: #003566;
-  padding: 20px;
+  padding: 20px 20px;
   margin: 20px;
   border-radius: 20px;
   border: solid;
+  width: 40%;
+  height: 200px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #MyPhoto {
   width: 250px;
-  background-color: #003566;
   padding: 20px;
   border-radius: 20px;
   border: solid;
@@ -38,7 +59,6 @@ section {
 h1 {
   margin: 20px;
   border-radius: 10px;
-  background-color: #003566;
   padding: 10px;
   border: solid;
 }
@@ -48,15 +68,10 @@ h2 {
   margin-bottom: 20px;
 }
 
-h1,
-h2 {
-  color: #ffbb00;
-}
-
 .logo {
   object-fit: contain;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   margin: 5px;
 }
 
@@ -69,17 +84,15 @@ ul {
 }
 
 ul > li {
-  font-size: large;
+  font-size: larger;
 }
 
 ul > li::before {
   content: "🐻";
   margin-right: 10px;
-  /* margin-left: 10px; */
 }
 
 li {
-  /* margin-left: 10px; */
   text-align: left;
 }
 
@@ -102,12 +115,4 @@ a:active {
 
 a:visited {
   text-decoration: underline;
-}
-
-section {
-  width: 40%;
-  height: 200px;
-  display: inline-block;
-  padding: 20px 20px;
-  vertical-align: middle;
 }
