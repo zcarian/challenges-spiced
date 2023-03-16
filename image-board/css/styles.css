@@ -20,7 +20,6 @@ body {
   grid-template-rows: 300px 200px 300px;
   gap: 1rem;
   padding: 1rem;
-  /* Add styles here */
 }
 
 .image-board__image {
@@ -31,26 +30,31 @@ body {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
+/* Added backgound color for better identification */
+
 .image-board__image--1 {
-  /* Add styles here */
+  background-color: aqua;
 }
 
 .image-board__image--2 {
-  /* Add styles here */
+  background-color: blueviolet;
+  grid-row: span 2;
 }
 
 .image-board__image--3 {
-  /* Add styles here */
+  background-color: coral;
 }
 
 .image-board__image--4 {
-  /* Add styles here */
+  background-color: darkgreen;
+  grid-row: span 2;
 }
 
 .image-board__image--5 {
-  /* Add styles here */
+  background-color: deeppink;
+  grid-row: span 2;
 }
 
 .image-board__image--6 {
-  /* Add styles here */
+  background-color: black;
 }
