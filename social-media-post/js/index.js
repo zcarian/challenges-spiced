@@ -11,6 +11,14 @@ console.clear();
 
 // --v-- write your code here --v--
 
+const postTitle = "This is a title";
+const postText =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit amet, impedit quidem vero aperiam, natus,";
+let numberOfLikes = 15;
+const user = "savory01";
+const isReported = false;
+numberOfLikes += 1;
+
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +26,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+
+console.log("Title: ", postTitle);
+console.log("Post text: ", postText);
+console.log("Likes", numberOfLikes);
+console.log("User: ", user);
+console.log("Is user reported: ", isReported);
 
 // --^-- write your code here --^--
