@@ -28,8 +28,8 @@ pizzaInput2.addEventListener("input", () => {
 // Task 1
 
 function calculatePizzaGain(diameter1, diameter2) {
-  let pizzaArea1 = Math.PI * diameter1;
-  let pizzaArea2 = Math.PI * diameter2;
+  let pizzaArea1 = Math.PI * (diameter1 / 2) ** 2;
+  let pizzaArea2 = Math.PI * (diameter2 / 2) ** 2;
   let pizzaGain = ((pizzaArea2 - pizzaArea1) / pizzaArea1) * 100;
   let textContent = Math.round(pizzaGain);
   output.innerHTML = textContent;
