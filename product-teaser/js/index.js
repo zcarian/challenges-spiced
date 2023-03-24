@@ -34,7 +34,12 @@ newProduct.innerHTML = `<div class="product__body">
 </div>
 <footer class="product__footer">
 <span class="product__price">${price}</span>
-<button type="button" class="product__buy-button">Buy</button>
+<button type="button" data-js="product-button" class="product__buy-button">Buy</button>
 </footer>`;
 
 document.body.append(newProduct);
+
+const button = document.querySelector('[data-js="product-button"]');
+button.addEventListener("click", () => {
+  console.log(`Name: ${name} \nPrice: ${price}`);
+});
