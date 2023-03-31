@@ -1,3 +1,6 @@
+import { cards } from "../App/App.js";
+import { Card } from "../Card/Card.js";
+
 export function Form() {
   const form = document.createElement("form");
   form.classList.add("form");
@@ -11,7 +14,7 @@ export function Form() {
               data-js="input-question"
           ></textarea>
           <span class="form__character-count">
-              <span data-js="amount-left-question"></span> characters left
+              <span data-js="amount-left-question"></span> charactex  rs left
           </span>
           <label for="answer">Your answer:</label>
           <textarea
