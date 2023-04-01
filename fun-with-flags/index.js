@@ -7,7 +7,7 @@ const queryInput = document.querySelector('[data-js="query-input"]');
 queryInput.addEventListener("input", (event) => {
   container.innerHTML = "";
 
-  const searchString = event.target.value;
+  const searchString = event.target.value.toLowerCase();
 
   // const foundCountry = countries.find((country) =>
   //   country.name.toLowerCase().startsWith(searchString)
@@ -17,8 +17,10 @@ queryInput.addEventListener("input", (event) => {
     return country.name.toLowerCase().startsWith(searchString);
   });
 
+  console.clear();
   foundCountries.forEach((country) => {
     if (country) {
+      console.log(country);
       const countryElement = Country(country);
       container.append(countryElement);
     }
