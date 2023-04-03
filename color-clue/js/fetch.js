@@ -24,6 +24,7 @@ export async function fetchNewColor() {
       console.error("Bad Response");
     } else {
       const colorData = await response.json();
+      console.log(colorData);
       setColorToGuess(colorData.hex.value, colorData.name.value);
     }
   } catch (error) {
