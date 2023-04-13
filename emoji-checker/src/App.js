@@ -7,24 +7,26 @@ export default function App() {
 
   const validCode = "🐡🐠🐋";
 
-  function handleClick(emoji) {
+  const handlClick = (e) => {
+    const emoji = e.target.innerText;
+
     code === "?" ? setCode(emoji) : setCode(code + emoji);
-  }
+  };
 
   return (
     <div className="container">
       <div className="button-container">
-        <button type="button" onClick={() => handleClick("🐡")}>
+        <button type="button" onClick={handlClick}>
           <span role="img" aria-label="Pufferfish">
             🐡
           </span>
         </button>
-        <button type="button" onClick={() => handleClick("🐋")}>
+        <button type="button" onClick={handlClick}>
           <span role="img" aria-label="Whale">
             🐋
           </span>
         </button>
-        <button type="button" onClick={() => handleClick("🐠")}>
+        <button type="button" onClick={handlClick}>
           <span role="img" aria-label="Clownfish">
             🐠
           </span>
