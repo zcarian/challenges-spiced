@@ -1,10 +1,13 @@
 import Link from "../components/Link";
+import { useLightsStore } from "../stores/lights";
 
-export default function HomePage({lightOn}) {
+export default function HomePage() {
+  const turnOnAmount = useLightsStore((state) => state.turnOnAmount());
+  console.log(turnOnAmount);
   return (
     <div>
       <h1>Home</h1>
-      <p>{lightOn} light(s) are on.</p>
+      <p>{turnOnAmount} light(s) are on.</p>
       <p>
         <Link href="/lights">All lights →</Link>
       </p>
