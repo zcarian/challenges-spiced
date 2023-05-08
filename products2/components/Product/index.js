@@ -3,13 +3,17 @@ import { useRouter } from "next/router";
 import { StyledButton } from "../Button/Button.styled";
 import { ProductCard } from "./Product.styled";
 import Comments from "../Comments";
+import ProductForm from "../ProductForm";
+import { useState } from "react";
 
-export default function Product() {
+export default function Product({onSubmit}) {
   const router = useRouter();
   const { id } = router.query;
 
   const { data, isLoading } = useSWR(id ? `/api/products/${id}` : null);
 
+  const [isEditMode, setIsEditMode] = useState(false);
+  
   if (!data) return;
 
   if (isLoading) {
@@ -27,6 +31,10 @@ export default function Product() {
       <StyledButton type="button" onClick={() => router.push("/")}>
         Back to all
       </StyledButton>
+      <StyledButton type="button" onClick={()=>{setIsEditMode(!isEditMode)}}>
+        📝
+      </StyledButton>
+      {isEditMode && <ProductForm onSubmit={onSubmit} isEditMode={isEditMode}/>}
     </ProductCard>
   );
 }
