@@ -6,7 +6,7 @@ import Comments from "../Comments";
 import ProductForm from "../ProductForm";
 import { useState } from "react";
 
-export default function Product({onSubmit}) {
+export default function Product({onSubmit, onDelete}) {
   const router = useRouter();
   const { id } = router.query;
 
@@ -35,6 +35,7 @@ export default function Product({onSubmit}) {
         📝
       </StyledButton>
       {isEditMode && <ProductForm onSubmit={onSubmit} isEditMode={isEditMode}/>}
+      <StyledButton type="button" onClick={()=>{onDelete(id)}}>❌</StyledButton>
     </ProductCard>
   );
 }
