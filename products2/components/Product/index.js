@@ -13,7 +13,7 @@ export default function Product({onSubmit, onDelete}) {
   const { data, isLoading } = useSWR(id ? `/api/products/${id}` : null);
 
   const [isEditMode, setIsEditMode] = useState(false);
-  
+
   if (!data) return;
 
   if (isLoading) {
@@ -34,8 +34,8 @@ export default function Product({onSubmit, onDelete}) {
       <StyledButton type="button" onClick={()=>{setIsEditMode(!isEditMode)}}>
         📝
       </StyledButton>
-      {isEditMode && <ProductForm onSubmit={onSubmit} isEditMode={isEditMode}/>}
       <StyledButton type="button" onClick={()=>{onDelete(id)}}>❌</StyledButton>
+      {isEditMode && <ProductForm onSubmit={onSubmit} isEditMode={isEditMode} data={data}/>}
     </ProductCard>
   );
 }
